@@ -1,0 +1,17 @@
+{
+  "status": "training_started_verified",
+  "date": "2026-11-01",
+  "server_user": "zhaoruiqi_yizu",
+  "experiment": "yellow_red_act_20261101_seed42",
+  "remote_root": "~/output/personal/zhaoruiqi_yizu/kideler/yellow_red_act_20261101_seed42",
+  "gpu": 1,
+  "real_dataset_smoke_epochs": 2,
+  "real_dataset_smoke_completed": true,
+  "full_training_epochs": 5000,
+  "train_episodes": 39,
+  "val_episodes": 10,
+  "train_only_normalization": true,
+  "initialization": "New ACT task parameters + ImageNet backbone; no existing task checkpoint loaded",
+  "final_model_ready": false,
+  "robot_commands_sent": 0
+}

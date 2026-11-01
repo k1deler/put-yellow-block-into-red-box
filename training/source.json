@@ -1,0 +1,5 @@
+{
+  "repo": "FuFutheBest/yam_train",
+  "commit": "0672a880e94d7683618b738f910d67d53a9e3df4",
+  "message": "train: long schedule (20000 epochs), multi-ckpt eval_offline, train_all.sh (split + all-data runs)"
+}

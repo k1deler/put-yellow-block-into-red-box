@@ -2,6 +2,7 @@
 # Independent venv and pinned GitHub source, no SSH/source-tree inspection required.
 set -euo pipefail
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+python3 "$ROOT/tools/prepare_assets.py"
 [[ $# == 2 ]] || { echo 'Usage: bash setup_robot_copy.sh /absolute/path/to/TRUSTED_REAL.pt task_name'; exit 2; }
 CKPT_INPUT="$1"
 TASK="$2"

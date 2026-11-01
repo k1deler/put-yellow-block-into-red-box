@@ -1,0 +1,38 @@
+data:
+  root: /dm3/cpfs-output/zhaoruiqi_yizu/output/fufu/yam_train/data/nedf3_30hz
+  task: put_block_in_bowl
+  camera_names:
+  - right_wrist
+  - left_wrist
+  train_ratio: 0.8
+  split_seed: 1
+  norm_stats_from: train
+  action_shift: 0
+  action_mode: delta
+policy:
+  chunk_size: 100
+  kl_weight: 10
+  hidden_dim: 512
+  dim_feedforward: 3200
+  enc_layers: 4
+  dec_layers: 7
+  nheads: 8
+  dropout: 0.1
+  pre_norm: false
+  backbone: resnet18
+  position_embedding: sine
+  dilation: false
+  masks: false
+  lr: 1.0e-05
+  lr_backbone: 1.0e-05
+  weight_decay: 0.0001
+train:
+  batch_size: 8
+  num_epochs: 5000
+  seed: 42
+  num_workers: 4
+  save_every: 500
+  extra_eval_every: 250
+  extra_eval_samples: 512
+  device: cuda
+name: yellow_red_seed42_train_only_stats

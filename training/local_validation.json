@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "cpu_tests": 9,
+  "checks": [
+    "real backward update changes action-head parameters",
+    "training/deployment ACTRef outputs exactly equal for identical tensors and state_dict",
+    "train/validation episodes deterministic and disjoint",
+    "failed episode and overlap rejected",
+    "nonfinite and gripper-range errors rejected",
+    "wrong source, image contract and camera index rejected",
+    "comparison playback matches original scheduler and safety-filter outputs"
+  ],
+  "test_data": "synthetic software fixtures, not new task weights",
+  "source_commit": "0672a880e94d7683618b738f910d67d53a9e3df4",
+  "real_training": "separate server experiment; see experiment_status.json",
+  "robot_commands_sent": 0
+}

@@ -1,0 +1,20 @@
+# ACT reference structure; a new experiment, not a renamed old checkpoint.
+_base_: ../upstream/configs/act_ref.yaml
+name: yellow_red_seed42_train_only_stats
+data:
+  task: put_block_in_bowl
+  camera_names: [right_wrist, left_wrist]
+  action_mode: delta
+  action_shift: 0
+  train_ratio: 0.8
+  split_seed: 1
+  norm_stats_from: train
+train:
+  seed: 42
+  batch_size: 8
+  num_epochs: 5000
+  num_workers: 4
+  save_every: 500
+  extra_eval_every: 250
+  extra_eval_samples: 512
+  device: cuda

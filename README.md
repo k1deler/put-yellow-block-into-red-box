@@ -24,6 +24,8 @@
 - [先看这里.md](先看这里.md)：安装与操作说明。
 - [源码学习.md](源码学习.md)：数据、模型、时间对齐、控制与退出流程说明。
 - [STATUS.md](STATUS.md)：验证状态与已知边界。
+- [模型对比与训练路线](model_comparison/README.md)：两份ACT权重的接口差异、统一比较指标和新模型微调路线；训练尚未开始。
+- `binary_assets.json`：上游公开STL、protobuf描述符等二进制资源的固定版本、大小与SHA256；`tools/prepare_assets.py`在安装时自动下载并校验，仓库保存代码和清单。
 
 ## 部署原则
 

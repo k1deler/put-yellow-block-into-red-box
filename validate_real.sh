@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+python3 "$ROOT/tools/prepare_assets.py" --check
 cd "$ROOT/project"
 PY="$ROOT/project/.venv/bin/python"
 export PYTHONDONTWRITEBYTECODE=1

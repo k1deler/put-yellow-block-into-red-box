@@ -1,0 +1,179 @@
+{
+  "upstream_commit": "bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5",
+  "files": [
+    {
+      "path": "project/docs/img/curves_act_v2_delta.png",
+      "bytes": 127029,
+      "sha256": "081875177f21b0579f89ca8d0e08ca6aa2ff4088d6fcb399f75ce81a94f18ea3",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/docs/img/curves_act_v2_delta.png"
+    },
+    {
+      "path": "project/docs/img/dryrun_review.png",
+      "bytes": 209530,
+      "sha256": "224bfb448acc3f51acf17ea6f12501af44080f5004c5f2434cbf9374026866ba",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/docs/img/dryrun_review.png"
+    },
+    {
+      "path": "project/docs/img/eval_v2_block_ep19.png",
+      "bytes": 200023,
+      "sha256": "d8fd99e18d56d64fee2a97f16ae24937754153a0475cc0c0c40c1676e00ea02c",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/docs/img/eval_v2_block_ep19.png"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/base.stl",
+      "bytes": 437784,
+      "sha256": "d95a5aa0c06a5ef6da02788b0df5a14e4202c1ae8eb2771a7f6f8947e3a490c7",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/base.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/gripper.stl",
+      "bytes": 400084,
+      "sha256": "efbe5e92e44c715d9c0ea0617e412a24db6ea0f3dabf18edc6746cd685a5d85f",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/gripper.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/tip_left.stl",
+      "bytes": 400084,
+      "sha256": "b70f8c1e32ccfae03fec46ac10a0f04195347bc530ee761143a5d7c5bb07ae07",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/tip_left.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/tip_right.stl",
+      "bytes": 400084,
+      "sha256": "f074d03ca2a4fdc53cb7f47240111010b02b6fe7bae4465230b6ac3e5a1b32d6",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/tip_right.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/Cable_holder.stl",
+      "bytes": 68684,
+      "sha256": "858e86e7900058a895ae0dcc9fda8c5901c6ef4742b86cecc2388fcc45cf704c",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/Cable_holder.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/D405_with_depth_.stl",
+      "bytes": 215084,
+      "sha256": "2a1fbf63b2bac3ab736274f8af4ab3fe8ef0a2b76a273d8542e377133c8ecaed",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/D405_with_depth_.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/Part_2.stl",
+      "bytes": 24984,
+      "sha256": "c48736bd27bac90f52528a46867bbe13dc13977a2c02a5641bf9e29b5f3cbacc",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/Part_2.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/camera_bracket_for_D405_crank_4310_.stl",
+      "bytes": 231984,
+      "sha256": "e12daeb5ed9fded3ae5dc2538073f9582fc4dd54cac8b0831ee8ffae4274c90b",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/camera_bracket_for_D405_crank_4310_.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/camera_bracket_for_D405_linear_4310_.stl",
+      "bytes": 161084,
+      "sha256": "7701f932d2343fac3a40d65445a4258b8e18dd7d5ad0c3fe8029ab64b909cbe0",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/camera_bracket_for_D405_linear_4310_.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/gripper.stl",
+      "bytes": 379584,
+      "sha256": "e0dad958755f0a9d58e6bea4f16fed2849146ae81c0dbd45487aff308cb49e58",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/gripper.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link1.stl",
+      "bytes": 308684,
+      "sha256": "41f7dfbd0471a0f96884c73782e82927f2bbc6aced9b55c0111da1b52d6e0c50",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link1.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link2.stl",
+      "bytes": 1495784,
+      "sha256": "067b51567a95a631d50fc02515bd045a2eb7f2f34489d5aec31d9f3f6ce58b30",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link2.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link3.stl",
+      "bytes": 1507584,
+      "sha256": "9650a114393881b54a68822ba3fb48fcd3318023ebecaf251e4f7804e91f801c",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link3.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link4.stl",
+      "bytes": 185484,
+      "sha256": "42740ce2bb8693760a35dc6e9e8fe0981999c02d6bf167a465c9936acf41c557",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link4.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link5.stl",
+      "bytes": 56884,
+      "sha256": "f70eb1191d6a1ccbb748a46fe8ba541f38094c9829fd1859300e70360c5a07c7",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link5.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/tip_left.stl",
+      "bytes": 1555584,
+      "sha256": "281354d77e4914ccd994b6c71fecce49a91527701f268d318f801769a6913685",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/tip_left.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/tip_right.stl",
+      "bytes": 1555484,
+      "sha256": "070925233d4b742c05c4d5508e951deba5947c2fabfa336a4e33db599c70ac3a",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/tip_right.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/Cable_holder.stl",
+      "bytes": 68684,
+      "sha256": "858e86e7900058a895ae0dcc9fda8c5901c6ef4742b86cecc2388fcc45cf704c",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/Cable_holder.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/D405_with_depth_.stl",
+      "bytes": 215084,
+      "sha256": "2a1fbf63b2bac3ab736274f8af4ab3fe8ef0a2b76a273d8542e377133c8ecaed",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/D405_with_depth_.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/camera_bracket_for_D405_crank_4310_.stl",
+      "bytes": 231984,
+      "sha256": "e12daeb5ed9fded3ae5dc2538073f9582fc4dd54cac8b0831ee8ffae4274c90b",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/camera_bracket_for_D405_crank_4310_.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/gripper.stl",
+      "bytes": 400084,
+      "sha256": "efbe5e92e44c715d9c0ea0617e412a24db6ea0f3dabf18edc6746cd685a5d85f",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/gripper.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/tip_left.stl",
+      "bytes": 400084,
+      "sha256": "b70f8c1e32ccfae03fec46ac10a0f04195347bc530ee761143a5d7c5bb07ae07",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/tip_left.stl"
+    },
+    {
+      "path": "project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/tip_right.stl",
+      "bytes": 400084,
+      "sha256": "f074d03ca2a4fdc53cb7f47240111010b02b6fe7bae4465230b6ac3e5a1b32d6",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/tip_right.stl"
+    },
+    {
+      "path": "project/yam_infer/data/nedf3_schemas/nmx.msg.ArmState.desc",
+      "bytes": 1360,
+      "sha256": "23da0b7314bee7739b21d7b854fb4d81f7d08a2e80fd8bc13597a0e123ef5ef9",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/yam_infer/data/nedf3_schemas/nmx.msg.ArmState.desc"
+    },
+    {
+      "path": "project/yam_infer/data/nedf3_schemas/nmx.msg.HandState.desc",
+      "bytes": 400,
+      "sha256": "cc023b884cf51e17baebcf780d16dabe4c0e77f9d8eb53db3816461262bf4b36",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/yam_infer/data/nedf3_schemas/nmx.msg.HandState.desc"
+    },
+    {
+      "path": "project/yam_infer/data/nedf3_schemas/nmx.msg.RGBD.desc",
+      "bytes": 636,
+      "sha256": "c88cfe24e582aa9dd041185d1ec275ab8719eb7cec174f9113e8dcfa0976abaa",
+      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/yam_infer/data/nedf3_schemas/nmx.msg.RGBD.desc"
+    }
+  ]
+}

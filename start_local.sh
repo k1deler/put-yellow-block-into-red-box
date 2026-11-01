@@ -3,6 +3,7 @@ set -euo pipefail
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 [[ -t 0 ]] || { echo 'Use an interactive terminal (SSH: allocate a TTY with ssh -t)'; exit 1; }
 [[ $# == 0 ]] || { echo 'Use the recorded project configs; CLI overrides are disabled here'; exit 2; }
+python3 "$ROOT/tools/prepare_assets.py" --check
 cd "$ROOT/project"
 PY="$ROOT/project/.venv/bin/python"
 export PYTHONDONTWRITEBYTECODE=1

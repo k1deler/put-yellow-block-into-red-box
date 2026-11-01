@@ -47,3 +47,34 @@ sample_episodes/
 # Host-specific validation markers are generated locally, never trusted from Git.
 evidence/registered_model.json
 evidence/real_model_offline_passed.json
+
+# Public binary resources are restored from pinned upstream URLs and verified.
+/project/docs/img/curves_act_v2_delta.png
+/project/docs/img/dryrun_review.png
+/project/docs/img/eval_v2_block_ep19.png
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/base.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/gripper.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/tip_left.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/crank_4310/tip_right.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/Cable_holder.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/D405_with_depth_.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/Part_2.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/camera_bracket_for_D405_crank_4310_.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/d405/camera_bracket_for_D405_linear_4310_.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/gripper.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link1.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link2.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link3.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link4.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/link5.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/tip_left.stl
+/project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/tip_right.stl
+/project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/Cable_holder.stl
+/project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/D405_with_depth_.stl
+/project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/d405/camera_bracket_for_D405_crank_4310_.stl
+/project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/gripper.stl
+/project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/tip_left.stl
+/project/third_party/i2rt/i2rt/robot_models/gripper/crank_4310/assets/tip_right.stl
+/project/yam_infer/data/nedf3_schemas/nmx.msg.ArmState.desc
+/project/yam_infer/data/nedf3_schemas/nmx.msg.HandState.desc
+/project/yam_infer/data/nedf3_schemas/nmx.msg.RGBD.desc
