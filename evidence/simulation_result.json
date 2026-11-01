@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "GitHub CPU random-model software lifecycle only",
+  "observation_source": "generated constant JPEGs",
+  "model_source": "tests.fake_act_ref, randomly initialized",
+  "fake_robot": "SimArms (in-process), no CAN or RPC worker started",
+  "lifecycle": {
+    "prompts": 2,
+    "running": true,
+    "timeout": true
+  },
+  "policy_steps": 4,
+  "hardware_opened": false,
+  "physical_commands_sent": 0,
+  "target_task_success_verified": false,
+  "checkpoint_forbidden_for_live_registration": true
+}

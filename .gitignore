@@ -1,0 +1,49 @@
+# Local credentials and robot-specific environment
+.env
+.env.*
+!.env.example
+robot.env
+*.pem
+*.key
+*credential*
+*token*
+hosts.yml
+
+# Environments, build and test scratch
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+work/
+offline_runs/
+*_tmp/
+
+# Private robot datasets, weights, raw telemetry and video
+models/
+project/models/
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.mcap
+*.npz
+*.npy
+*.mp4
+*.avi
+*.zip
+*.tar*
+runs_infer/
+runs_infer_dryrun/
+fixtures/
+sample_episodes/
+.run.lock
+*.pid
+
+# Host-specific validation markers are generated locally, never trusted from Git.
+evidence/registered_model.json
+evidence/real_model_offline_passed.json

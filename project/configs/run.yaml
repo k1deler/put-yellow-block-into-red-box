@@ -1,0 +1,47 @@
+# Inference run settings, read by yam_infer.run (--run-config).
+# A command-line value overrides the one here.  The effective values
+# are printed at start and stored in each episode's meta.json
+# (settings).  Unknown keys or bad values stop the program.
+
+execution:
+  # How the model's plans are turned into motion.  The ONLY place to
+  # set this (models.yaml only says which model / how to read it).
+  # A plan = chunk_size steps at 30 steps/s, fixed by the model:
+  #   act_v2  (old):  50 steps = 1.7 s
+  #   act_ref (new): 100 steps = 3.3 s
+  #   chunk:    follow one plan for `horizon` steps, then switch
+  #             (uses: horizon, blend_s)
+  #   ensemble: re-plan every frame (~30/s), average all plans
+  #             that cover a moment (uses: ensemble_m)
+  # Official ACT (tonyzhaozh/act imitate_episodes.py) equivalents:
+  #   default:          mode: chunk, horizon: <chunk_size>, blend_s: 0
+  #   --temporal_agg:   mode: ensemble, ensemble_m: 0.01
+  mode: chunk
+  # [chunk only] steps executed per plan = how often the model
+  # looks again (30 -> every 1.0 s).  1..chunk_size (checked at
+  # start: 50 for act_v2, 100 for act_ref).
+  #   larger:  more decisive, slower to react
+  #   smaller: reacts faster, may hesitate (plans often start
+  #            with "wait a moment, then move")
+  horizon: 30
+  # [chunk only] cross-fade from the old plan to the new one [s]
+  # (0 = hard switch)
+  blend_s: 0.1
+  # [ensemble only] plan weight exp(-m * i), i = 0 = oldest.
+  #   > 0 older plans dominate (smooth, laggy; ACT paper: 0.01)
+  #   < 0 newest plans dominate (reactive, may jitter)
+  ensemble_m: 0.01
+
+control:
+  # true = this arm ignores the model and holds the pose it had when
+  # the episode started (dims 0-6 = left, 7-13 = right).
+  # Both false = the model drives both arms (symmetric).
+  # Command line: --freeze-left / --no-freeze-left,
+  #               --freeze-right / --no-freeze-right
+  freeze_left: false
+  freeze_right: false
+
+episode:
+  # an episode ends ("max_seconds") after this many seconds of
+  # policy control; the demos last 12-25 s
+  max_seconds: 40.0
