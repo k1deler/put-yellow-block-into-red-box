@@ -24,8 +24,8 @@ offline_runs/
 *_tmp/
 
 # Private robot datasets, weights, raw telemetry and video
-models/
-project/models/
+/models/
+/project/models/
 *.pt
 *.pth
 *.safetensors
