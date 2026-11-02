@@ -26,7 +26,7 @@ def test_profile_distinguishes_prior_server_evidence_from_github_default():
     root=Path(__file__).resolve().parents[1]
     profile=json.loads((root/'target_task.json').read_text(encoding='utf-8'))
     assert profile['task']=='put_block_in_bowl'
-    assert profile['expected_sha256'] is None
+    assert profile['expected_sha256']=='ad1ebebcf41052877c9285a3b4fe855317f8b5a6f9ff3168e4d9e11b36842912'
     assert 'registered_model.json' in profile['checksum_policy']
     assert profile['execution']['horizon']==60
     assert profile['episode']['max_seconds']==40

@@ -21,10 +21,10 @@
 在独立目录克隆本仓库，然后指定实际的可信模型绝对路径：
 
 ```bash
-bash setup_yellow_red.sh /absolute/path/to/block_bowl_delta.pt
+bash setup_yellow_red.sh
 ```
 
-也可用环境变量`TASK_CHECKPOINT`指定路径。安装器创建独立Python环境，补齐并校验公开机械资源，核对任务和格式，运行测试及GPU离线检查，不启动真实设备。步骤见[安装与操作](先看这里.md)。
+先从[新训练权重发布页](https://github.com/k1deler/yellow-red-task1-runtime/releases/tag/yellow-red-seed42-epoch3000)下载`yellow_red_seed42_selected.pt`，放入本目录的`input_models/`。也可传入该文件的绝对路径或用`TASK_CHECKPOINT`指定。当前锁定seed42、第3000轮的新训练权重；旧权重不再作为默认输入。安装器创建独立Python环境，补齐并校验公开机械资源，核对任务和格式，运行测试及GPU离线检查，不启动真实设备。已有模型先备份再更换，运行参数保持原样。步骤见[安装与操作](先看这里.md)。
 
 自检通过后，在有现场监护的交互终端运行：
 

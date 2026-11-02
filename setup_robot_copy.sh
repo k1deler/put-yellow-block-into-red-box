@@ -7,6 +7,8 @@ python3 "$ROOT/tools/prepare_assets.py"
 CKPT_INPUT="$1"
 TASK="$2"
 [[ -f "$CKPT_INPUT" && "$CKPT_INPUT" == /* ]] || { echo 'Need an absolute path to a trusted trained checkpoint'; exit 1; }
+exec 9>"$ROOT/.run.lock"
+flock -n 9 || { echo 'Runner is active; model replacement refused. Stop it normally first.'; exit 1; }
 cd "$ROOT/project"
 export PYTHONDONTWRITEBYTECODE=1
 if [[ ! -x .venv/bin/python ]]; then
@@ -27,7 +29,9 @@ mkdir -p "$ROOT/evidence"
 # Validate the single-task source before model registration.
 if [[ ! -e "$ROOT/evidence/registered_model.json" ]]; then
     "$PY" -m pytest -q -p no:cacheprovider 2>&1 | tee "$ROOT/evidence/upstream_full_tests.log"
-    "$PY" "$ROOT/tools/register_model.py" --checkpoint "$CKPT_INPUT" --task "$TASK"
 fi
+# The task profile pins this new checkpoint. Replacement saves the old model and
+# validation record and does not rewrite existing execution/control settings.
+"$PY" "$ROOT/tools/register_model.py" --checkpoint "$CKPT_INPUT" --task "$TASK" --replace
 bash "$ROOT/validate_real.sh"
 echo 'TASK_SETUP_PASSED; no real devices have been opened.'
