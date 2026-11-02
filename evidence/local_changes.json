@@ -1,7 +1,0 @@
-{
-  "modified_upstream_files": {
-    "SEVERS.md": "Redacted embedded SSH password for distribution; no runtime behavior changes"
-  },
-  "code_algorithms_modified": false,
-  "target_profile_separate": true
-}

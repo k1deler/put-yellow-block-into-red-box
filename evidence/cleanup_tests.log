@@ -1,0 +1,12 @@
+..........................................................               [100%]
+============================== warnings summary ===============================
+::test_training_and_deployed_act_contract_roundtrip
+  [workspace]\work\github_ml_deps\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+    warnings.warn(
+
+::test_training_and_deployed_act_contract_roundtrip
+  [workspace]\work\github_ml_deps\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+    warnings.warn(msg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+58 passed, 2 warnings in 9.66s

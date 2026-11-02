@@ -12,7 +12,7 @@ from yam_infer.policy.act_ref import FORMAT, ACTRefPolicy
 
 def make_act_ref_ckpt(
     path: Path,
-    task: str = "put_banana_in_bowl",
+    task: str = "put_block_in_bowl",
     action_mode: str = "delta",
     chunk: int = 100,
     small: bool = True,
@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("out", type=Path)
-    p.add_argument("--task", default="put_banana_in_bowl")
+    p.add_argument("--task", default="put_block_in_bowl")
     p.add_argument("--full", action="store_true", help="real act_ref sizes (512 wide, 4+7 layers)")
     a = p.parse_args()
     print(make_act_ref_ckpt(a.out, task=a.task, small=not a.full))

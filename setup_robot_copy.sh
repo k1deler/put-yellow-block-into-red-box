@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Independent venv and pinned GitHub source, no SSH/source-tree inspection required.
+# Independent environment and task-model registration.
 set -euo pipefail
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 python3 "$ROOT/tools/prepare_assets.py"
@@ -18,16 +18,16 @@ pip_install() {
     if command -v uv >/dev/null; then uv pip install --python "$PY" "$@"
     else "$PY" -m pip install "$@"; fi
 }
-# Same torch/CUDA combination as the GitHub setup script for RTX 50xx.
+# Validated torch/CUDA combination for RTX 50xx.
 pip_install 'torch==2.7.1+cu128' 'torchvision==0.22.1+cu128' --index-url https://download.pytorch.org/whl/cu128
 pip_install -r requirements.txt pytest ruff --index-url "${PIP_MIRROR:-https://pypi.org/simple}"
 export PYTHONPATH="$ROOT/project:$ROOT/project/third_party/i2rt"
 export PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
 mkdir -p "$ROOT/evidence"
-# Before changing the GitHub default model selection, run its original tests unchanged.
+# Validate the single-task source before model registration.
 if [[ ! -e "$ROOT/evidence/registered_model.json" ]]; then
     "$PY" -m pytest -q -p no:cacheprovider 2>&1 | tee "$ROOT/evidence/upstream_full_tests.log"
     "$PY" "$ROOT/tools/register_model.py" --checkpoint "$CKPT_INPUT" --task "$TASK"
 fi
 bash "$ROOT/validate_real.sh"
-echo 'GITHUB_COPY_SETUP_PASSED; no real devices have been opened. Launch locally only.'
+echo 'TASK_SETUP_PASSED; no real devices have been opened.'

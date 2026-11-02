@@ -1,28 +1,21 @@
 {
-  "status": "local_cpu_software_validation_passed",
-  "date": "2026-10-31",
-  "task": "黄色物块放入红色盒子",
-  "program_task": "put_block_in_bowl",
-  "github": {
-    "url": "https://github.com/FuFutheBest/yam_infer",
-    "commit": "bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5",
-    "branch": "main"
-  },
-  "source_files": 170,
-  "source_runtime_unchanged": true,
-  "python_files_compiled": 79,
-  "upstream_tests_passed": 43,
-  "target_tests_passed": 7,
+  "status": "passed",
+  "date": "2026-11-02",
+  "task": "put_block_in_bowl",
+  "tests": 58,
+  "python_files_compiled": 105,
   "shell_syntax_passed": [
     "setup_robot_copy.sh",
     "setup_yellow_red.sh",
     "start_local.sh",
     "validate_real.sh"
   ],
-  "ruff": "E9,F passed",
-  "cpu_simulation": {
+  "scope": "single-task configuration, model and recorder tests, worker/watchdog, training/deployment compatibility, simulated lifecycle",
+  "network_control_runtime_unchanged": true,
+  "real_weights_changed": false,
+  "simulation": {
     "status": "passed",
-    "scope": "GitHub CPU random-model software lifecycle only",
+    "scope": "CPU synthetic-model software lifecycle only",
     "observation_source": "generated constant JPEGs",
     "model_source": "tests.fake_act_ref, randomly initialized",
     "fake_robot": "SimArms (in-process), no CAN or RPC worker started",
@@ -31,20 +24,16 @@
       "running": true,
       "timeout": true
     },
-    "policy_steps": 4,
+    "policy_steps": 2,
     "hardware_opened": false,
     "physical_commands_sent": 0,
     "target_task_success_verified": false,
     "checkpoint_forbidden_for_live_registration": true
   },
-  "windows_skips": [
-    "Linux real process/RPC integration test_arms_fake_worker.py",
-    "Linux process inspection/recovery test_tools.py"
-  ],
-  "true_yellow_red_weights_included": false,
-  "true_model_inference_executed": false,
-  "gpu_verified": false,
-  "real_devices_opened": false,
+  "live_devices_opened": false,
   "robot_commands_sent": 0,
-  "note": "CPU inference in upstream tests and lifecycle demo uses random test weights. Actual checkpoint must be copied locally on the robot and validated by setup_yellow_red.sh."
+  "limitations": [
+    "Linux process/RPC integration requires robot-host validation.",
+    "Actual task success is not proved by CPU synthetic tests."
+  ]
 }

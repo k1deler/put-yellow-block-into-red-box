@@ -2,24 +2,6 @@
   "upstream_commit": "bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5",
   "files": [
     {
-      "path": "project/docs/img/curves_act_v2_delta.png",
-      "bytes": 127029,
-      "sha256": "081875177f21b0579f89ca8d0e08ca6aa2ff4088d6fcb399f75ce81a94f18ea3",
-      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/docs/img/curves_act_v2_delta.png"
-    },
-    {
-      "path": "project/docs/img/dryrun_review.png",
-      "bytes": 209530,
-      "sha256": "224bfb448acc3f51acf17ea6f12501af44080f5004c5f2434cbf9374026866ba",
-      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/docs/img/dryrun_review.png"
-    },
-    {
-      "path": "project/docs/img/eval_v2_block_ep19.png",
-      "bytes": 200023,
-      "sha256": "d8fd99e18d56d64fee2a97f16ae24937754153a0475cc0c0c40c1676e00ea02c",
-      "url": "https://raw.githubusercontent.com/FuFutheBest/yam_infer/bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5/docs/img/eval_v2_block_ep19.png"
-    },
-    {
       "path": "project/third_party/i2rt/i2rt/robot_models/arm/yam/v1/assets/base.stl",
       "bytes": 437784,
       "sha256": "d95a5aa0c06a5ef6da02788b0df5a14e4202c1ae8eb2771a7f6f8947e3a490c7",

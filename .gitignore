@@ -48,6 +48,17 @@ sample_episodes/
 evidence/registered_model.json
 evidence/real_model_offline_passed.json
 
+# Private analysis and host-specific records remain outside this repository.
+/model_comparison/
+/training/compare_baseline.py
+/training/after_training.py
+/training/experiment_status.json
+/training/resolved_training_config.yaml
+/training/smoke_metrics.jsonl
+/project/docs/
+/project/SEVERS.md
+/training/upstream/docs/
+
 # Public binary resources are restored from pinned upstream URLs and verified.
 /project/docs/img/curves_act_v2_delta.png
 /project/docs/img/dryrun_review.png

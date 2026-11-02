@@ -1,4 +1,4 @@
-"""Register a trusted real exported checkpoint, using only GitHub's model contracts."""
+"""Register a trusted trained checkpoint for the selected task contract."""
 import argparse
 import hashlib
 import json
@@ -59,11 +59,11 @@ def main():
     if sha(src)!=sha(dest):raise RuntimeError('Checkpoint copy mismatch')
     config['ckpt']='models/selected_real.pt'
     original=ROOT/'project/configs/models.yaml'
-    backup=ROOT/'evidence/github_default_models.yaml'
+    backup=ROOT/'evidence/initial_models.yaml'
     if not backup.exists():shutil.copy2(original,backup)
     original.write_text(yaml.safe_dump(dict(model=config),sort_keys=False),encoding='utf-8')
     run_path=ROOT/'project/configs/run.yaml'
-    run_backup=ROOT/'evidence/github_default_run.yaml'
+    run_backup=ROOT/'evidence/initial_run.yaml'
     if not run_backup.exists():shutil.copy2(run_path,run_backup)
     run_config={key:target_task[key] for key in ('execution','control','episode')}
     run_path.write_text(yaml.safe_dump(run_config,sort_keys=False),encoding='utf-8')

@@ -47,7 +47,7 @@ def main():
         r=json.loads(marker.read_text())
         if r.get('status')!='passed' or r['runtime_hashes']!=runtime_hashes() or r['environment']!=environment():
             raise ValueError('Model/code/config/environment changed; rerun validate_real.sh')
-        print('GITHUB_REPRODUCTION_GATE_OK; no hardware opened')
+        print('TASK_MODEL_GATE_OK; no hardware opened')
         return
     marker.unlink(missing_ok=True)
     import numpy as np

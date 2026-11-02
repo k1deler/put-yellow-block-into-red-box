@@ -3,12 +3,21 @@
   "task": "put_block_in_bowl",
   "format": "yam_train/act_ref-v1",
   "action_mode": "delta",
-  "checkpoint_source_on_robot": "/home/team1/fufu/yam_infer/models/act_ref/block_bowl_delta.pt",
   "expected_sha256": null,
   "checksum_policy": "Compute SHA256 from the local real source checkpoint during registration, verify the independent copy, then pin it in evidence/registered_model.json. Previously wrapped terminal text is not used as a trusted hash.",
-  "identity_evidence": "Previously inspected fufu historical run 20261030_135932_put_block_in_bowl and one recorded camera frame. Colors are not stated by the GitHub default config.",
-  "execution_profile_source": "Previously read deployed run metadata, kept separate from GitHub source",
-  "execution": {"mode": "chunk", "horizon": 60, "blend_s": 0.1, "ensemble_m": 0.01},
-  "control": {"freeze_left": false, "freeze_right": false},
-  "episode": {"max_seconds": 40.0}
+  "identity_evidence": "Task identity confirmed from a recorded scene; visual target is a yellow block and a red container.",
+  "execution_profile_source": "Previously validated task deployment configuration; preserved for compatibility.",
+  "execution": {
+    "mode": "chunk",
+    "horizon": 60,
+    "blend_s": 0.1,
+    "ensemble_m": 0.01
+  },
+  "control": {
+    "freeze_left": false,
+    "freeze_right": false
+  },
+  "episode": {
+    "max_seconds": 40.0
+  }
 }

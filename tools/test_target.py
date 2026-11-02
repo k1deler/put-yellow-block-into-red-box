@@ -7,12 +7,12 @@ from register_model import identify
 def test_only_yellow_red_task_accepted():
     good=dict(format='yam_train/act_ref-v1',task='put_block_in_bowl',action_mode='delta')
     assert identify(good,'put_block_in_bowl')['format']=='act_ref'
-    for task in ('put_blue_block_in_blue_cup','put_banana_in_bowl'):
+    for task in ('unsupported_task','other_task'):
         with pytest.raises(ValueError):identify(good,task)
 
 
 @pytest.mark.parametrize('payload',[
-    dict(format='yam_train/act_ref-v1',task='put_blue_block_in_blue_cup',action_mode='delta'),
+    dict(format='yam_train/act_ref-v1',task='unsupported_task',action_mode='delta'),
     dict(format='yam_train/act_ref-v1',task='put_block_in_bowl',action_mode='abs'),
     dict(format='kideler-task1-act-v1',task='put_block_in_bowl'),
     dict(tasks=['put_block_in_bowl'],action_mode='delta'),
@@ -30,4 +30,4 @@ def test_profile_distinguishes_prior_server_evidence_from_github_default():
     assert 'registered_model.json' in profile['checksum_policy']
     assert profile['execution']['horizon']==60
     assert profile['episode']['max_seconds']==40
-    assert 'GitHub' in profile['identity_evidence']
+    assert 'yellow block' in profile['identity_evidence']

@@ -16,7 +16,7 @@ CAMS = ["right_wrist", "left_wrist"]
 
 
 def _recorder(root: Path) -> RunRecorder:
-    return RunRecorder(root, "put_banana_in_bowl", {"policy": {"cameras": CAMS}}, fps=30)
+    return RunRecorder(root, "put_block_in_bowl", {"policy": {"cameras": CAMS}}, fps=30)
 
 
 def _fill(rec: RunRecorder, frames: bool = True) -> np.ndarray:
@@ -52,7 +52,7 @@ def test_episode_is_nedf3_readable_and_frames_are_referenced(tmp_path: Path) -> 
     assert not list(tmp_path.glob("*_inprogress"))
 
     ep = read_episode(out)  # the same reader the dry-run / training side uses
-    assert ep.task == "put_banana_in_bowl"
+    assert ep.task == "put_block_in_bowl"
     assert len(ep.cameras["right_wrist"][1]) == 10
     assert len(ep.joints["follower"]["right"][0]) == 30
     st = state14(ep, "follower", ep.joints["follower"]["left"][0])
@@ -82,8 +82,8 @@ def test_empty_episode_leaves_nothing_and_crashed_one_is_recovered(tmp_path: Pat
     assert rec.close(end_reason="quit before start") is None
     assert not any(p for p in tmp_path.iterdir() if p.name != "quarantine")
 
-    crashed = tmp_path / "20260101_000000_put_banana_in_bowl_inprogress"
+    crashed = tmp_path / "20260101_000000_put_block_in_bowl_inprogress"
     crashed.mkdir()
     rec = _recorder(tmp_path)  # next start moves it away
-    assert (tmp_path / "quarantine" / "20260101_000000_put_banana_in_bowl_interrupted").is_dir()
+    assert (tmp_path / "quarantine" / "20260101_000000_put_block_in_bowl_interrupted").is_dir()
     rec.close()

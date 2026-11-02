@@ -1,9 +1,9 @@
 """Run a trained policy on the I2RT YAM follower arms.
 
-    python -m yam_infer.run --ckpt model.pt --task put_blue_block_in_blue_cup
+    python -m yam_infer.run --ckpt model.pt --task put_block_in_bowl
 
 Dry run without any hardware (simulated arm + frames from a recorded episode):
-    python -m yam_infer.run --ckpt model.pt --task put_banana_in_bowl --dry-run EPISODE_DIR
+    python -m yam_infer.run --ckpt model.pt --task put_block_in_bowl --dry-run EPISODE_DIR
     ... --dry-run EPISODE_DIR --fake-arms   # same, but through the real worker processes + RPC
 
 Keys (type + Enter):  Enter = start / pause-resume   r = new episode   q = park & quit

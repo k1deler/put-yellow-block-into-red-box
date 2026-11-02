@@ -37,5 +37,5 @@
 ## 重新同步 SI 的更新
 
 ```bash
-bash scripts/vendor_diff.sh ~/Dev/MVIG/SuperInference-feat-i2rt_NEDF3   # 列出与上游的差异
+bash scripts/vendor_diff.sh /path/to/SuperInference   # 列出与上游的差异
 ```

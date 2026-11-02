@@ -1,6 +1,6 @@
 """Train ACT exactly like tonyzhaozh/act `imitate_episodes.py::main/train_bc`, configured by a YAML file.
 
-    python -m yam_train.train --config configs/banana_abs.yaml [--set train.num_epochs=10 ...] [--out DIR]
+    python -m yam_train.train --config configs/block_bowl_delta.yaml [--set train.num_epochs=10 ...] [--out DIR]
 
 One GPU per run (like the source); run different configs on different GPUs with CUDA_VISIBLE_DEVICES.
 

@@ -1,6 +1,6 @@
 """YAML experiment config.
 
-    cfg = load_config("configs/banana_abs.yaml", overrides=["train.num_epochs=10"])
+    cfg = load_config("configs/block_bowl_delta.yaml", overrides=["train.num_epochs=10"])
 
 - `_base_: other.yaml` (path relative to the file) is loaded first and deep-merged.
 - overrides are `dotted.key=value`; the value is parsed as YAML (numbers, bools, lists).

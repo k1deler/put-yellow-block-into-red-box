@@ -82,25 +82,3 @@ def test_training_and_deployed_act_contract_roundtrip(tmp_path,monkeypatch):
     torch.testing.assert_close(actual,expected,rtol=0,atol=0)
     # A tiny synthetic-gradient test is never offered as a trained task checkpoint.
     assert not list(tmp_path.glob('*.pt'))
-
-
-def test_comparison_playback_matches_original_scheduler_and_filter():
-    from compare_baseline import simulate
-    from yam_infer.control.scheduler import ActionScheduler,SafetyFilter
-    rng=np.random.default_rng(3)
-    chunks=np.cumsum(rng.normal(0,.002,(130,100,14)),axis=1)+.5
-    lower=np.zeros(14);upper=np.ones(14);initial=np.full(14,.5)
-    actual,feedback,details=simulate(chunks,lower=lower,upper=upper,initial=initial)
-    scheduler=ActionScheduler(30,100,mode='chunk',horizon=60,blend_s=.1)
-    safety=SafetyFilter(lower,upper);safety.reset(initial)
-    expected=[];active=-1
-    for tick in range(len(actual)):
-        now=tick/100
-        anchor=(min(int(now*30),len(chunks)-1)//60)*60
-        if anchor!=active:
-            scheduler.add(anchor/30,chunks[anchor]);active=anchor
-        expected.append(safety(scheduler.target_at(now),.01))
-    np.testing.assert_allclose(actual,expected,rtol=0,atol=1e-12)
-    assert feedback.shape==actual.shape
-    assert details['clamped_ticks']==safety.clamped
-    assert details['rate_limited_ticks']==safety.rate_limited

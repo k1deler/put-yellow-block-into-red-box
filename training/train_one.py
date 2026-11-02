@@ -1,7 +1,7 @@
 """One bounded, independent ACT experiment; --launch is required to train.
 
 Requires an already converted real yellow/red dataset and an existing CUDA Python
-environment. Never loads fufu's task checkpoint or accesses any robot interface.
+environment. Never loads an existing task checkpoint or accesses any robot interface.
 """
 import argparse
 import json

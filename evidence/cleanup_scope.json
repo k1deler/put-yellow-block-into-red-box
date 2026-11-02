@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-02",
+  "task": "put_block_in_bowl",
+  "runtime_algorithm_changes": false,
+  "model_weight_changes": false,
+  "controller_changes": false,
+  "default_config": "yellow/red task only, validated 60-step chunks and 40-second limit",
+  "copyright_and_licenses_preserved": true,
+  "source_documentation": "README.md",
+  "private_analysis_excluded_from_repository": true,
+  "changed_protected_files": {
+    "project/yam_infer/run.py": {
+      "before": "f238e54ddddb3ea73399522c1b2401798ed467cf2636430852b1ca4e08d52576",
+      "after": "18de9bb24266db8f1b90f86adaa090816a2e2091863a9fc585ebd2694dd0a7d7"
+    },
+    "training/upstream/yam_train/config.py": {
+      "before": "50906f6aba5d5e74545900cbd34cc4a5991e8e6658b88c1afad5584fb8ea9fd1",
+      "after": "52f26defeead49fd15acf07250f135c3fba6fc2f2c0a6fff47fed95abb498ed6"
+    },
+    "training/upstream/yam_train/train.py": {
+      "before": "743c0f7bb90b88d406d11e5aa842b3c086f77de7143a3874e7b75848f53a6f01",
+      "after": "041e57ac280f09d703806a7dd504edf7362b6fee0673785282cae45ba7962295"
+    }
+  }
+}
