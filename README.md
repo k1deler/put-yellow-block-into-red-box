@@ -55,6 +55,4 @@ bash start_local.sh
 
 ## 代码来源与许可
 
-运行模块基于[FuFutheBest/yam_infer](https://github.com/FuFutheBest/yam_infer)，固定提交`bb2e8aba33d6bd9bcba43c2ffca129ad90c3feb5`；训练模块基于[FuFutheBest/yam_train](https://github.com/FuFutheBest/yam_train)，固定提交`0672a880e94d7683618b738f910d67d53a9e3df4`。本项目新增任务配置、部署与校验工具、数据审计和实验组织；复用的核心实现不声明为本项目作者原创。
-
 保留代码内必要版权文件头、组件来源及许可证：[组件说明](project/VENDORED.md)、[I2RT许可证](project/third_party/i2rt/LICENSE)、[推理ACT/DETR许可证](project/yam_infer/policy/detr/LICENSE)、[训练ACT/DETR许可证](training/upstream/yam_train/detr/LICENSE)。原应用顶层未提供独立许可文件，本项目不对其代码重新授权。机器可读的公开资源URL与固定版本清单仅用于安装及校验。
