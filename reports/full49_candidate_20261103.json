@@ -1,0 +1,40 @@
+{
+  "id": "yellow_red_seed42_full49_20261103",
+  "filename": "yellow_red_seed42_full49_selected.pt",
+  "sha256": "d3f794642abf0e382efe2fe1b43025aa34c442cb4cc5b1d2b57187959f0185e5",
+  "bytes": 336120731,
+  "selected_epoch": 8999,
+  "continuation_epoch": 3999,
+  "additional_epochs_trained": 5000,
+  "training_episodes": 49,
+  "held_out_episodes": 0,
+  "diagnostic_episodes": 10,
+  "diagnostic_windows": 512,
+  "reference_is_held_out": false,
+  "metrics": {
+    "right_arm_rad": 0.030573312264286796,
+    "right_grip": 0.03351303211906377,
+    "left_arm_rad": 0.0012298323859902345,
+    "left_grip": 0.0004022320171747241,
+    "first_step_right_arm_rad": 0.016134157177968216,
+    "first_step_right_grip": 0.02424368998981663
+  },
+  "format": "yam_train/act_ref-v1",
+  "task": "put_block_in_bowl",
+  "action_mode": "delta",
+  "action_shift": 0,
+  "fps": 30,
+  "chunk_size": 100,
+  "image_size": [
+    480,
+    640
+  ],
+  "camera_names": [
+    "right_wrist",
+    "left_wrist"
+  ],
+  "parent_sha256": "4ff570e84985d39340cdbeacd7a4045b0c9769c54339f68ebaec614198627ed0",
+  "robot_tested": false,
+  "success_claim": false,
+  "release_kind": "candidate pending local robot validation"
+}

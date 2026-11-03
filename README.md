@@ -24,7 +24,7 @@
 bash setup_yellow_red.sh
 ```
 
-先从[新训练权重发布页](https://github.com/k1deler/yellow-red-task1-runtime/releases/tag/yellow-red-seed42-epoch3000)下载`yellow_red_seed42_selected.pt`，放入本目录的`input_models/`。也可传入该文件的绝对路径或用`TASK_CHECKPOINT`指定。当前锁定seed42、第3000轮的新训练权重；旧权重不再作为默认输入。安装器创建独立Python环境，补齐并校验公开机械资源，核对任务和格式，运行测试及GPU离线检查，不启动真实设备。已有模型先备份再更换，运行参数保持原样。步骤见[安装与操作](先看这里.md)。
+先从[新训练权重发布页](https://github.com/k1deler/yellow-red-task1-runtime/releases/tag/yellow-red-full49-20261103)下载`yellow_red_seed42_full49_selected.pt`，放入本目录的`input_models/`。也可传入该文件的绝对路径或用`TASK_CHECKPOINT`指定。当前候选为seed42全49条轨迹微调，选择累计第8999轮权重；已完成5000轮追加训练及离线兼容性验证，仍待现场测试。原3000轮版本及其发布保留用于回退。安装器创建独立Python环境，补齐并校验公开机械资源，核对任务和格式，运行测试及GPU离线检查，不启动真实设备。已有模型先备份再更换，运行参数保持原样。步骤见[安装与操作](先看这里.md)。
 
 自检通过后，在有现场监护的交互终端运行：
 

@@ -3,10 +3,10 @@
   "task": "put_block_in_bowl",
   "format": "yam_train/act_ref-v1",
   "action_mode": "delta",
-  "expected_sha256": "ad1ebebcf41052877c9285a3b4fe855317f8b5a6f9ff3168e4d9e11b36842912",
-  "model_version": "yellow_red_seed42_epoch3000",
-  "checkpoint_filename": "yellow_red_seed42_selected.pt",
-  "checkpoint_release_url": "https://github.com/k1deler/yellow-red-task1-runtime/releases/tag/yellow-red-seed42-epoch3000",
+  "expected_sha256": "d3f794642abf0e382efe2fe1b43025aa34c442cb4cc5b1d2b57187959f0185e5",
+  "model_version": "yellow_red_seed42_full49_20261103",
+  "checkpoint_filename": "yellow_red_seed42_full49_selected.pt",
+  "checkpoint_release_url": "https://github.com/k1deler/yellow-red-task1-runtime/releases/tag/yellow-red-full49-20261103",
   "checksum_policy": "Only the selected new training checkpoint is accepted. Verify the pinned SHA256 before loading, then record it in evidence/registered_model.json. Preserve any previously registered model before replacement.",
   "identity_evidence": "Task identity confirmed from a recorded scene; visual target is a yellow block and a red container.",
   "execution_profile_source": "Previously validated task deployment configuration; preserved for compatibility.",
@@ -22,5 +22,11 @@
   },
   "episode": {
     "max_seconds": 40.0
+  },
+  "model_validation": {
+    "robot_tested": false,
+    "reference_is_held_out": false,
+    "diagnostic_windows": 512,
+    "training_episodes": 49
   }
 }

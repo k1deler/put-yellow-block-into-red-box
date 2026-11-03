@@ -2,7 +2,7 @@
 import copy
 import unittest
 
-from selection_quality import OBJECTIVES, select_candidate
+from selection_quality import OBJECTIVES, select_candidate, evaluation_reference
 
 
 def candidate(name, arm, grip, first_arm=None, first_grip=None, epoch=0):
@@ -12,6 +12,19 @@ def candidate(name, arm, grip, first_arm=None, first_grip=None, epoch=0):
 
 
 class SelectionQualityTests(unittest.TestCase):
+    def test_full_data_diagnostics_require_acknowledgement(self):
+        ck=dict(train_episodes=['a','b'],val_episodes=[],diagnostic_reference_episodes=['b'])
+        with self.assertRaises(ValueError):evaluation_reference(ck)
+        names,scope=evaluation_reference(ck,True)
+        self.assertEqual(names,{'b'})
+        self.assertFalse(scope['reference_is_held_out'])
+        self.assertEqual(scope['reference_training_overlap'],['b'])
+
+    def test_held_out_scope_is_preserved(self):
+        names,scope=evaluation_reference(dict(train_episodes=['a'],val_episodes=['b']))
+        self.assertEqual(names,{'b'})
+        self.assertTrue(scope['reference_is_held_out'])
+
     def test_small_arm_gain_cannot_hide_large_gripper_regression(self):
         # The former arm-first tuple chooses A, despite its 3x gripper error.
         rows = [candidate('A', .100, .30), candidate('B', .105, .10)]

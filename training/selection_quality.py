@@ -13,6 +13,20 @@ OBJECTIVES = (
 RULE = 'pareto_minimax_arm_gripper_v1'
 
 
+def evaluation_reference(checkpoint, allow_training_overlap=False):
+    """Require an explicit acknowledgement before evaluating full-data exports."""
+    train = set(checkpoint['train_episodes'])
+    names = set(checkpoint.get('val_episodes', []))
+    if not names and allow_training_overlap:
+        names = set(checkpoint.get('diagnostic_reference_episodes', []))
+    overlap = sorted(train & names)
+    if not names or (overlap and not allow_training_overlap):
+        raise ValueError('No independent validation split; diagnostic overlap requires explicit acknowledgement')
+    return names, dict(reference_is_held_out=not overlap,
+                      reference_training_overlap=overlap,
+                      evaluation_scope='held-out validation' if not overlap else 'training-overlap diagnostic')
+
+
 def select_candidate(records):
     """Return the balanced Pareto candidate plus an auditable ranking.
 
