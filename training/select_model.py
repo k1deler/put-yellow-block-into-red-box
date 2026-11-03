@@ -6,6 +6,7 @@ import sys
 
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'upstream'))
+from selection_quality import select_candidate
 
 
 def main():
@@ -23,7 +24,7 @@ def main():
     store=FrameStore(args.data)
     checkpoints=sorted((args.run/'ckpt').glob('epoch_*.pt'))+list((args.run/'ckpt').glob('last.pt'))
     if not checkpoints:raise ValueError('No trained candidates')
-    records=[];best=None
+    records=[]
     for path in checkpoints:
         ck=torch.load(path,map_location='cpu',weights_only=False)
         train_names=set(ck['train_episodes']);val_names=set(ck['val_episodes'])
@@ -40,15 +41,16 @@ def main():
                  evaluation='fixed 512 held-out windows, z=0, original physical target space; not closed-loop success')
         records.append(row)
         (out/'selection.json').write_text(json.dumps(records,indent=2)+'\n')
-        score=(metrics['right_arm_rad'],metrics['right_grip'])
-        if best is None or score<best[0]:best=(score,path)
         del policy,ck
         torch.cuda.empty_cache()
-    chosen=torch.load(best[1],map_location='cpu',weights_only=False)
+    selected,quality=select_candidate(records)
+    (out/'selection_quality.json').write_text(json.dumps(quality,indent=2)+'\n')
+    chosen=torch.load(selected['checkpoint'],map_location='cpu',weights_only=False)
     training=[e for e in store.episodes(chosen['task']) if e['name'] in set(chosen['train_episodes'])]
     chosen['start_pose']=np.mean([store.qpos[e['start']] for e in training],axis=0).tolist()
     chosen['experiment_note']='New seed42 ACT training, train-only normalization and start pose, source yam_train attributed'
-    chosen['selection']=dict(source_checkpoint=str(best[1]),rule='minimum held-out right-arm MAE; gripper MAE tie-break',
+    chosen['selection']=dict(source_checkpoint=selected['checkpoint'],rule=quality['rule'],
+                             objectives=quality['objectives'],
                              validation_windows=512,robot_tested=False)
     chosen['source_provenance']=json.loads((ROOT/'source.json').read_text())
     model=out/'yellow_red_seed42_selected.pt'
