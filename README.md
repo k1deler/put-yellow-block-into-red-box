@@ -1,6 +1,14 @@
-# 黄色物块 → 红色盒子
+# put-yellow-block-into-red-box — 黄色物块放入红色盒子
 
 面向I2RT YAM双臂机器人的单任务训练与执行项目。任务标识为`put_block_in_bowl`；包括模型登记、独立环境安装、离线验证、起始姿态对齐、动作调度和每轮运行记录。
+
+仓库地址：[`k1deler/put-yellow-block-into-red-box`](https://github.com/k1deler/put-yellow-block-into-red-box)。已有本地克隆可在其目录执行：
+
+```bash
+git remote set-url origin git@github.com:k1deler/put-yellow-block-into-red-box.git
+```
+
+仓库名称与“黄色物块放入红色盒子”任务一致。模型内部标识继续为`put_block_in_bowl`，固定权重SHA、执行参数和保护流程保持不变。此前Release标签、附件文件名和已安装目录继续保留；新克隆目录为`put-yellow-block-into-red-box`。
 
 ## 当前配置
 
@@ -24,7 +32,7 @@
 bash setup_yellow_red.sh
 ```
 
-先从[新训练权重发布页](https://github.com/k1deler/yellow-red-task1-runtime/releases/tag/yellow-red-full49-20261103)下载`yellow_red_seed42_full49_selected.pt`，放入本目录的`input_models/`。也可传入该文件的绝对路径或用`TASK_CHECKPOINT`指定。当前候选为seed42全49条轨迹微调，选择累计第8999轮权重；已完成5000轮追加训练及离线兼容性验证，仍待现场测试。原3000轮版本及其发布保留用于回退。安装器创建独立Python环境，补齐并校验公开机械资源，核对任务和格式，运行测试及GPU离线检查，不启动真实设备。已有模型先备份再更换，运行参数保持原样。步骤见[安装与操作](先看这里.md)。
+先从[新训练权重发布页](https://github.com/k1deler/put-yellow-block-into-red-box/releases/tag/yellow-red-full49-20261103)下载`yellow_red_seed42_full49_selected.pt`，放入本目录的`input_models/`。也可传入该文件的绝对路径或用`TASK_CHECKPOINT`指定。当前候选为seed42全49条轨迹微调，选择累计第8999轮权重；已完成5000轮追加训练及离线兼容性验证，仍待现场测试。原3000轮版本及其发布保留用于回退。安装器创建独立Python环境，补齐并校验公开机械资源，核对任务和格式，运行测试及GPU离线检查，不启动真实设备。已有模型先备份再更换，运行参数保持原样。步骤见[安装与操作](先看这里.md)。
 
 自检通过后，在有现场监护的交互终端运行：
 

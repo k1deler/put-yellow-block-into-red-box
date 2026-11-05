@@ -6,7 +6,7 @@
   "expected_sha256": "d3f794642abf0e382efe2fe1b43025aa34c442cb4cc5b1d2b57187959f0185e5",
   "model_version": "yellow_red_seed42_full49_20261103",
   "checkpoint_filename": "yellow_red_seed42_full49_selected.pt",
-  "checkpoint_release_url": "https://github.com/k1deler/yellow-red-task1-runtime/releases/tag/yellow-red-full49-20261103",
+  "checkpoint_release_url": "https://github.com/k1deler/put-yellow-block-into-red-box/releases/tag/yellow-red-full49-20261103",
   "checksum_policy": "Only the selected new training checkpoint is accepted. Verify the pinned SHA256 before loading, then record it in evidence/registered_model.json. Preserve any previously registered model before replacement.",
   "identity_evidence": "Task identity confirmed from a recorded scene; visual target is a yellow block and a red container.",
   "execution_profile_source": "Previously validated task deployment configuration; preserved for compatibility.",

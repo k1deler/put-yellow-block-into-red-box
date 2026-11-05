@@ -36,7 +36,7 @@ def restore(root=ROOT, check_only=False):
         if check_only:
             raise FileNotFoundError('Asset missing; run python3 tools/prepare_assets.py: ' + str(path))
         path.parent.mkdir(parents=True, exist_ok=True)
-        request = urllib.request.Request(item['url'], headers={'User-Agent': 'yellow-red-task1-runtime'})
+        request = urllib.request.Request(item['url'], headers={'User-Agent': 'put-yellow-block-into-red-box'})
         with urllib.request.urlopen(request, timeout=60) as response:
             raw = response.read(item['bytes'] + 1)
         if len(raw) != item['bytes'] or hashlib.sha256(raw).hexdigest() != item['sha256']:
